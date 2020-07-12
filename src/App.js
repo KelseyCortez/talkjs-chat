@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import Login from './Components/Login';
+import MyNetwork from './Components/MyNetwork';
+import Messaging from './Components/Messaging';
 import './App.css';
 
 class App extends Component {
@@ -18,6 +21,9 @@ class App extends Component {
             </ul>
 
           </nav>
+          <Route path='/' exact component={Login}/>
+          <Route path='/mynetwork' component={MyNetwork}/>
+          <Route path='messaging' component={Messaging} />
         </Router>
       </div>
     );
